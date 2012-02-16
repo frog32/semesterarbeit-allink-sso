@@ -1,0 +1,106 @@
+%
+%  Kickoff Protokoll
+%
+%  Created by Marc Egli on 2012-02-07.
+%  Template by Silvan Spross
+%
+\documentclass[]{scrreprt}
+\usepackage[ngerman]{babel}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Running Headers and footers
+%\usepackage{fancyhdr}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+\usepackage{url}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+\else
+    \usepackage{graphicx}
+\fi
+
+\title{Kick-off Protokoll}
+    
+\author{Studierender - Marc Egli\\
+    Projektbetreuer - Lukas Eppler\\
+    Auftraggeber - Silvan Spross, allink.creative\\
+    \\
+    HSZ-T - Technische Hochschule Zürich}
+    
+\date{1. Februar 2012}
+
+\begin{document}
+
+    \ifpdf
+        \DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+    \else
+        \DeclareGraphicsExtensions{.eps, .jpg}
+    \fi
+
+    \maketitle
+
+    \pagenumbering{arabic}
+
+    % \tableofcontents
+
+    \chapter{Kick-off Protokoll}
+
+    \section{Semesterarbeit}
+    Single-Sign-On - Lösung für allink GmbH
+
+    \section{Fragen Kick-Off-Meeting}
+    Alle Fragen aus dem Kick-Off-Meeting konnten geklärt werden:
+    \begin{enumerate}
+        \item Steht das auftraggebende Unternehmen hinter dieser Semesterarbeit? \\
+            {\bf Ja}, das Unternehmen steht voll hinter dieser Semesterarbeit.
+        \item Sind die fachliche Kompetenz und die Verfügbarkeit der Betreuungsperson sichergestellt? \\
+            {\bf Ja}, da die Betreuungsperson selbst im Webbereich tätig ist und dieses Fach zusätzlich selbst unterrichtet.
+        \item Sind die Urheberrechte und Publikationsrechte geklärt? \\
+            {\bf Ja}, die Arbeit kann vollständig öffentlich zugänglich gemacht
+            werden und wird unter einer Opensource-Lizenz veröffentlicht.
+        \item Bekommt die Studentin oder der Student die notwendige logistische und beratende
+            Unterstützung durch das auftraggebende Unternehmen? \\
+            {\bf Ja}
+        \item Entsprechen Thema und Aufgabenstellungen den Anforderungen an eine Semesterarbeit? \\
+            {\bf Ja}
+        \item Ist die Arbeit klar abgegrenzt und terminlich entkoppelt von den Prozessen des auftraggebenden Unternehmens? \\
+            {\bf Ja}
+        \item Ist eine Grobplanung vorhanden? Sind die nächsten Schritte \\
+            klar formuliert (von der Studentin oder dem Studenten)? \\
+            {\bf Ja}
+        \item Ist die Arbeit technisch und terminlich von der Studentin oder dem Studenten umsetzbar? \\
+            {\bf Ja}
+    \end{enumerate}
+    
+    \section{Weitere Beschlüsse}
+    Folgende weitere Beschlüsse wurden während des Meetings gefällt.
+    \begin{itemize}
+        \item Als Projektplanungstool soll Basecamp verwendet werden.
+        \item Sowohl die Dokumentation wie auch der Programmcode soll auf Github gespeichert werden.
+    \end{itemize}
+    
+\end{document}
