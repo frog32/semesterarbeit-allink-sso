@@ -1,65 +1,189 @@
-\documentclass[a4paper,twoside,10pt]{article}
+%  --------------------------------------------------------------------------
+%  Semesterarbeit Single Sign-On Lösung für Django Dokumentation
+%  Created by Marc Egli on 2012-04-02.
+%  --------------------------------------------------------------------------
+
+%  --------------------------------------------------------------------------
+%  Latex Document Settings
+%  --------------------------------------------------------------------------
+\documentclass[
+11pt, % Schriftgrösse
+a4paper, % A4 Papier
+BCOR10mm, % Absoluter Wert der Bindekorrektur, z.B. BCOR1cm
+DIV14, % Satzspiegel festlegen siehe
+       % http://www.ctex.org/documents/packages/nonstd/koma-script.pdf
+footsepline = false, % Trennlinie zwischen Textkörper und Fußzeile
+                     % bei normalen Seiten
+headsepline, % Trennlinie zwischen Kopfzeile und Textkörper
+             % bei normalen Seiten
+oneside, % Zweiseitig
+openright,
+halfparskip, % Europäischer Satz mit Abstand zwischen den Absätzen
+abstracton, % inkl. Abstract
+listof=totocnumbered, % Abb.- und Tab.verzeichnis im Inhaltsverzeichnis
+bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
+]{scrreprt}
+
+\usepackage[automark]{scrpage2} % Gestaltung von kopf- und Fußzeile
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{translator}
+\usepackage{tocbasic}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Latin Modern
+\usepackage[T1]{fontenc}
+\usepackage{hyphenat}
+\usepackage{ae} % Schöne Schriften für PDF-Dateien
+
+% Tradmark
+\def\TTra{\textsuperscript{\texttrademark}}
+
+%1.5 Zeilenabstand
+\usepackage[onehalfspacing]{setspace}
+
+% Festlegung des Seitenstils (scrpage2)
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\automark[chapter]{section}
+
+% \lehead{\sffamily\upshape\headmark}
+% \cehead{}
+% \rehead{}
+% \lefoot[\pagemark]{\upshape \pagemark}
+% \cefoot{}
+% \refoot{}
+% \lohead{}
+% \cohead{}
+\lohead{\sffamily\upshape\headmark}
+\lofoot{}
+\cofoot{}
+\rofoot[\pagemark]{\scshape \pagemark}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
 \usepackage{listings}
 
-%
-%  Created by Marc Egli on 2012-01-19.
-%  Copyright (c) 2012 Marc Egli. All rights reserved.
-%
-%
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+\usepackage{longtable}
+
+% Abkürzungsverzeichnis erstellen.
+\usepackage[printonlyused]{acronym}
+
+% schöne Tabelle zeichnen
+\usepackage{booktabs}
+\renewcommand{\arraystretch}{1.4} %Die Zeilenabstände in Tabllen angepasst.
+
+% für variable Breiten
+\usepackage{tabularx}
+
+% Durchgestrichener Text
+\usepackage[normalem]{ulem} %emphasize weiterhin kursiv
 
 % This is now the recommended way for checking for PDFLaTeX:
 \usepackage{ifpdf}
-\usepackage[utf8]{inputenc}
-\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{float}
-\usepackage{fancyhdr} %%Fancy Kopf- und Fußzeilen
-\usepackage{a4wide} %%Kleinere Seitenränder = mehr Text pro Zeile.
 
-\usepackage[pdftitle={Single Sign On},%
-						pdfauthor={Marc Egli},%
-						pdfcreator={TextMate2},
-						pdfsubject={Semesterarbeit},
-						plainpages=false,
-						pdfpagelabels,
-						colorlinks,
-						linkcolor=black,
-						filecolor=black,
-						citecolor=black]{hyperref}
+\usepackage{eurosym}
 
+\usepackage{natbib}
 
-%\newif\ifpdf
-%\ifx\pdfoutput\undefined
-%\pdffalse % we are not running PDFLaTeX
-%\else
-%\pdfoutput=1 % we are running PDFLaTeX
-%\pdftrue
-%\fi
+\usepackage{paralist}
+
+\usepackage{array,ragged2e}
+
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+  bookmarks=true,         % show bookmarks bar?
+  unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+  pdftoolbar=true,        % show Acrobat’s toolbar?
+  pdfmenubar=true,        % show Acrobat’s menu?
+  pdffitwindow=true,      % window fit to page when opened
+  pdfstartview={FitH},    % fits the width of the page to the window
+  pdftitle={Semesterarbeit},   
+  pdfauthor={Marc Egli},
+  pdfsubject={Single Sign-On Lösung für Django},
+  pdfcreator={TeX Live 2011},
+  pdfproducer={pdfTeX, Version 3.1415926-2.3-1.40.12},
+  pdfnewwindow=true,      % links in new window
+  colorlinks=true,       % false: boxed links; true: colored links
+  % linkcolor=blue,          % color of internal links
+  % citecolor=black,        % color of links to bibliography
+  % filecolor=magenta,      % color of file links
+  % urlcolor=cyan          % color of external links
+  linkcolor=black,          % color of internal links
+  citecolor=black,        % color of links to bibliography
+  filecolor=black,      % color of file links
+  urlcolor=black          % color of external links
+}
 
 \ifpdf
-\usepackage{subfigure}
-\usepackage[pdftex]{graphicx}
+    \usepackage[pdftex]{graphicx}
 \else
-\usepackage{graphicx}
+    \usepackage{graphicx}
 \fi
 
-\usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
+\makeatletter 
+\let\orgdescriptionlabel\descriptionlabel 
+\renewcommand*{\descriptionlabel}[1]{% 
+  \let\orglabel\label 
+  \let\label\@gobble 
+  \phantomsection 
+  \edef\@currentlabel{#1}% 
+  %\edef\@currentlabelname{#1}% 
+  \let\label\orglabel 
+  \orgdescriptionlabel{#1}% 
+} 
+\makeatother 
+
+%  --------------------------------------------------------------------------
+%  Start Document
+%  --------------------------------------------------------------------------
+\title{Single Sign-On Lösung für Django}
+
+\author{Semesterarbeit in Informatik\\
+    \\
+    Studierender - Marc Egli\\
+	Auftraggeber - Silvan Spross\\
+    Projektbetreuer - Lukas Eppler\\
+	\\
+	HSZ-T - Technische Hochschule Zürich}
+
+\date{Februar 2012 bis ...}
 
 
 \begin{document}
-\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
-\input{chapters/frontpage.tex}
+  \ifpdf
+    \DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+  \else
+    \DeclareGraphicsExtensions{.eps, .jpg}
+  \fi
 
-\pagestyle{fancy} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
-\newpage
-\tableofcontents
-\listoffigures
+  \pagenumbering{Alph}
+  
+  \maketitle
+  \input{chapters/abstract.tex}
 
-\input{chapters/abstract.tex}
-\input{chapters/konzept.tex}
+  \pagenumbering{Roman}
+  
+  \tableofcontents
+  
+  \pagenumbering{arabic}
+  
+  \chapter{Einleitung}
+  \label{cha:Einleitung}
+  \input{chapters/einleitung.tex}
 
-
+  \chapter{Design}
+  \label{cha:Design}
+  \input{chapters/design.tex}
+  
+  
+  \appendix
+  \listoffigures
+  \listoftables
+  % \lstlistoflistings
+  
+  \bibliographystyle{unsrtnat}
+  \bibliography{literaturverzeichnis}
 \end{document}

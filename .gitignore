@@ -6,10 +6,12 @@
 *.out
 *.toc
 *.lof
+*.lot
 *.ilg
 *.ind
 *.bbl
 *.blg
 *.maf
 *.mtc
+*.mtc0
 .DS_Store

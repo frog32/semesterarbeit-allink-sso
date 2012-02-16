@@ -1,0 +1,14 @@
+# Settings
+tabSize          = 4
+softTabs         = true
+softWrap         = false
+
+[ *.txt ]
+softWrap         = true
+spellChecking    = true
+spellingLanguage = 'de'
+
+[*.tex]
+tabSize          = 2
+spellChecking    = true
+spellingLanguage = 'de'
