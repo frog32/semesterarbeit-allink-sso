@@ -1,0 +1,75 @@
+\documentclass[a4paper,twoside,10pt]{article}
+\usepackage{listings}
+
+%
+%  Created by Marc Egli on 2012-01-19.
+%  Copyright (c) 2012 Marc Egli. All rights reserved.
+%
+%
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{fancyhdr} %%Fancy Kopf- und Fußzeilen
+\usepackage{a4wide} %%Kleinere Seitenränder = mehr Text pro Zeile.
+
+\usepackage[pdftitle={Single Sign On},%
+						pdfauthor={Marc Egli},%
+						pdfcreator={TextMate2},
+						pdfsubject={Semesterarbeit},
+						plainpages=false,
+						pdfpagelabels,
+						colorlinks,
+						linkcolor=black,
+						filecolor=black,
+						citecolor=black]{hyperref}
+
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+
+\ifpdf
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+
+\begin{document}
+\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
+
+\pagestyle{fancy} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
+\newpage
+\tableofcontents
+\listoffigures
+
+\section{Abstract} % (fold)
+\label{sec:Abstract}
+% section Abstract (end)
+
+\section{Konzept} % (fold)
+\label{sec:Konzept}
+% section Konzept (end)
+
+\section{Testing} % (fold)
+\label{sec:Testing}
+% section Testing (end)
+
+
+
+
+\end{document}
