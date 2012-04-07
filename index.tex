@@ -33,6 +33,8 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \usepackage[T1]{fontenc}
 \usepackage{hyphenat}
 \usepackage{ae} % Schöne Schriften für PDF-Dateien
+\usepackage{multirow} % tabellenzellen zusammenfassen
+\usepackage{slashbox} % Tabellenbox welche diagonal getrennt ist
 
 % Tradmark
 \def\TTra{\textsuperscript{\texttrademark}}
@@ -173,6 +175,15 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \chapter{Einleitung}
   \label{cha:Einleitung}
   \input{chapters/einleitung.tex}
+  
+  \chapter{Analyse IT Landschaft in der Allink}
+  \label{cha:Analyse IT Landschaft in der Allink}
+  \input{chapters/analyse.tex}
+  
+  
+  \chapter{Evaluation}
+  \label{cha:Evaluation}
+  \input{chapters/evaluation.tex}
 
   \chapter{Design}
   \label{cha:Design}
