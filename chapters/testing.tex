@@ -1,0 +1,32 @@
+%!TEX root = ../index.tex
+Da ein Single-Sign-On System aus Mindestens zwei Systemen besteht und in diesem
+Fall das eine bestehend ist, wird darauf verzichtet automatisierte
+Integrationstests zu erstellen. Stattdessen werden die wichtigsten Vorgänge
+mit Manuellen Testverfahren getestet.
+
+\section{Ausgangslage}
+\label{sec:Ausgangslage}
+Um die Reproduzierbarkeit dieser Tests zu gewährleisten, müssen vor Beginn
+folgende Schritte getätigt werden.
+
+\begin{itemize}
+    \item Das Cache des Browsers muss geleert werden.
+    \item Es darf keine offene Google-Apps Sitzung bestehen. Falls ein Benutzer
+          angemeldet ist, muss dieser Abgemeldet werden.
+    \item Die Datenbank des Testsystems muss neu Erstellt werden.
+    \item Sämtliche Cookies welche zum Testsystem gehören müssen gelöscht
+          werden.
+    \item Ein Testbenutzer ist in Google-Apps erstellt und aktiv.
+\end{itemize}
+
+
+\begin{tabular}{p{7cm} p{7cm}}
+Aktion & Erwartetes Resultat\\
+\hline
+Drücken des ``Login mit OpenID'' Buttons im Admin & Der Browser wechselt zum Google Login\\
+Eingeben der Benutzerdaten & Django Admin Startseite wird angezeigt und der zugewiesene Benutzer ist angemeldet\\
+Löschen der Session des Testsystems und neu laden der Seite & Die Login-Seite erscheint\\
+Sperren des Benutzers in Google-Apps mit einem anderen Browser & Kein Resultat erwartet\\
+Drücken des ``Login mit OpenID'' Buttons im Admin & Der Browser wechselt zum Google Login\\
+Eingeben der Benutzerdaten & Benutzer darf sich nicht anmelden können\\
+\end{tabular}
