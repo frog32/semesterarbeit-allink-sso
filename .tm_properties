@@ -1,7 +1,7 @@
 # Settings
 tabSize          = 4
 softTabs         = true
-softWrap         = false
+softWrap         = true
 
 [ *.txt ]
 softWrap         = true

@@ -94,7 +94,10 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 
 \usepackage{array,ragged2e}
 
-\usepackage[hyperfootnotes=false]{hyperref}
+% glossary
+\usepackage[toc,xindy,acronym]{glossaries}
+
+\usepackage[]{hyperref}
 \hypersetup{
   bookmarks=true,         % show bookmarks bar?
   unicode=true,           % non-Latin characters in Acrobat’s bookmarks
@@ -137,6 +140,9 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \orgdescriptionlabel{#1}% 
 } 
 \makeatother 
+
+\include{glossary}
+\makeglossaries
 
 %  --------------------------------------------------------------------------
 %  Start Document
@@ -193,12 +199,19 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \label{cha:Tests}
   \input{chapters/testing.tex}
   
+  \chapter{Umsetzung}
+  \label{cha:Umsetzung}
+  \input{chapters/umsetzung.tex}
   
   \appendix
   \listoffigures
   \listoftables
+  
+  \glsaddall
+  \printglossaries
   % \lstlistoflistings
   
-  \bibliographystyle{unsrtnat}
-  \bibliography{literaturverzeichnis}
+  \nocite{*}
+  \bibliographystyle{alpha}
+  \bibliography{cite}
 \end{document}
