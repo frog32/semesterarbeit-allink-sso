@@ -14,30 +14,38 @@ Allink verwendet aus Google-Apps folgende Tools.
 	\item Google Docs 
 	\item Google Analytics 
 \end{itemize}
+Google-Apps sind bei allink schon seit mehreren Jahren im Einsatz. Google Docs hat für den internen Gebrauch Microsoft Office vollständig abgelöst.
 
 \subsection{Basecamp}
 \label{subs:Basecamp}
-Mit Basecamp werden Milestones und Todo-Listen für sämtliche Projekte verwaltet. Zudem werden sämtliche Arbeitsaufwände darin erfasst um am Ende eines Projekts einen Überblick über alle Arbeitsleistungen zu haben.
+Mit Basecamp werden Milestones und Todo-Listen für sämtliche Projekte verwaltet. Zudem werden sämtliche Arbeitsaufwände darin erfasst um am Ende eines Projekts einen Überblick über alle Arbeitsleistungen zu haben. Basecamp ist seit mehr als zwei Jahren im Einsatz wird jedoch nicht von allen Mitarbeitern konsequent genutzt.
 
 \subsection{Mac OS X Server}
 \label{subs:Mac OS X Server}
+Da allink für alle Desktop und Notebook Computer Geräte von Apple verwendet, wurde auch beim zentralen Fileserver auf ein Produkt von Apple gesetzt.
 
 \section{Mitarbeiter}
 \label{sec:Mitarbeiter}
-Um herauszufinden welche Benutzerdaten die Mitarbeiter kennen und welche Systeme sie nur verwenden können da das Passwort gespeichert wurde, wurde mit einer Umfrage der Sachverhalt erörtert.
+Da die Mitarbeiter von allink die zukünftigen Benutzer des zu entwickelnden Systems sein werden, wurden 11 Mitarbeiter darüber befragt, welche Passwörter und Logindaten ihnen bekannt sind. Aus den Resultaten der Befragung, welche in Tabelle~\ref{tab:umfrage_passworter} zu sehen sind, geht hervor, dass die meisten Benutzer ihre Logindaten für Google-Apps auswendig kennen und nur wenige Mitarbeiter sich dessen bewusst sind, dass sie auf dem zentralen Fileserver ein Konto besitzen.
 
-\begin{tabular}
-	{|l | c|} \hline System & Anzahl\\
-	\hline Google-Apps & 10\\
-	\hline Basecamp & 5\\
-	\hline Mac OS X Server & 4\\
-	\hline 
-\end{tabular}
+\begin{table}
+  \centering
+  \begin{tabular}
+  	{|l | c|} \hline System & Anzahl\\
+  	\hline Google-Apps & 10\\
+  	\hline Basecamp & 5\\
+  	\hline Mac OS X Server & 4\\
+  	\hline 
+  \end{tabular}
+  \label{tab:umfrage_passworter}
+  \caption{Anzahl Mitarbeiter welche ihre Logindaten kennen}
+\end{table}
 
 \section{Login Prozess}
 \label{sec:Login Prozess}
+Da die meisten Mitarbeiter nicht die Passwörter sämtlicher Webapplikationen kennen, ist ein zeitraubendes Nachfragen der Daten notwendig falls man nicht mehr eingeloggt ist. Eine Darstellung dieses Vorgehens ist in Abbildung~\ref{fig:login-before} zu sehen.
 
-\begin{figure}[H]  
+\begin{figure}
 		\includegraphics[width=0.70\textwidth]{include/login_before.pdf}
 		\caption{Login Prozess vor dieser Arbeit}
 		\label{fig:login-before}

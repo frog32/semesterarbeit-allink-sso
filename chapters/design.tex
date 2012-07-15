@@ -2,54 +2,26 @@
 \section{Entscheidungen}
 \label{sec:Entscheidungen}
 
-\subsubsection{Zu verwendendes System}
-\label{ssub:Zu verwendendes System}
-Aus der Evaluation geht hervor, dass eine Anbindung an die OpenID Dienste von
-Google wohl am meisten Sinn macht. Google-Apps ist ein fester Bestandteil der
-Arbeitsmittel jedes Mitarbeiters der Allink.
+\subsection{Zu verwendendes System}
+\label{sub:Zu verwendendes System}
+Aus der Evaluation geht hervor, dass eine Anbindung an die OpenID Dienste von Google wohl am meisten Sinn macht. Google-Apps ist ein fester Bestandteil der Arbeitsmittel jedes Mitarbeiters der Allink.
 
-\subsubsection{Anmelde-Mechanismus}
-\label{ssub:Anmelde-Mechanismus}
-Da in den meisten Fällen keine granulare Unterteilung der Benutzerrechte jedes
-einzelnen Mitarbeiters nötig ist. Da es viel mehr darum geht jedem Mitarbeiter
-von Allink Zugriff zu den Admin-Bereichen sämtlicher Webapplikationen zu
-gewähren und beim Enden dessen Arbeitsverhältnis diese Rechte wieder zu
-entziehen. Wird wie bisher für jede Webapplikation ein Benutzer mit vollen
-Administrator-Rechten erstellt. Bei erfolgreichem Anmelden über Google-Apps ist
-der Mitarbeiter danach im Admin-Bereich mit diesem Benutzer angemeldet. Der
-Mitarbeiter bleibt danach für die Dauer seiner Session angemeldet.
+\subsection{Anmelde-Mechanismus}
+\label{sub:Anmelde-Mechanismus}
+Da in den meisten Fällen keine granulare Unterteilung der Benutzerrechte jedes einzelnen Mitarbeiters nötig ist. Da es viel mehr darum geht jedem Mitarbeiter von Allink Zugriff zu den Admin-Bereichen sämtlicher Webapplikationen zu gewähren und beim Enden dessen Arbeitsverhältnis diese Rechte wieder zu entziehen. Wird wie bisher für jede Webapplikation ein Benutzer mit vollen Administrator-Rechten erstellt. Bei erfolgreichem Anmelden über Google-Apps ist der Mitarbeiter danach im Admin-Bereich mit diesem Benutzer angemeldet. Der Mitarbeiter bleibt danach für die Dauer seiner Session angemeldet.
 
-\subsubsection{Wahl eines OpenID Providers}
-\label{ssub:Wahl eines OpenID Providers}
-Da die Applikation um zu funktionieren nur einen OpenID Provider benötigt. Ist
-sie zumindest Theoretisch mit jedem beliebigen OpenID Provider verwendbar. Da
-wir die Mitarbeiter mit Hilfe der vom OpenID Provider verlangten E-Mail-Adresse
-identifizieren, und ein OpenID Provider diese E-Mail-Adresse fälschen könnte,
-kann der OpenID Provider nicht während des Login-Prozesses gewählt werden. Der
-Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls
-jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard
-verwendet.
+\subsection{Wahl eines OpenID Providers}
+\label{sub:Wahl eines OpenID Providers}
+Da die Applikation um zu funktionieren nur einen OpenID Provider benötigt. Ist sie zumindest Theoretisch mit jedem beliebigen OpenID Provider verwendbar. Da wir die Mitarbeiter mit Hilfe der vom OpenID Provider verlangten E-Mail-Adresse identifizieren, und ein OpenID Provider diese E-Mail-Adresse fälschen könnte, kann der OpenID Provider nicht während des Login-Prozesses gewählt werden. Der Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard verwendet.
 
 \subsection{Abhängigkeiten}
 \label{sub:Abhängigkeiten}
-Da die zu erstellende Applikation in bestehende Projekte integriert werden soll,
-ist es wichtig die externen Abhängigkeiten so gering wie möglich zu gestalten.
-So wird nur für die Implementation von OpenID auf eine Bibliothek
-zurückgegriffen.
+Da die zu erstellende Applikation in bestehende Projekte integriert werden soll, ist es wichtig die externen Abhängigkeiten so gering wie möglich zu gestalten. So wird nur für die Implementation von OpenID auf eine Bibliothek zurückgegriffen.
 
 \subsubsection{Python OpenID}
 \label{ssub:Python OpenID}
-Da die korrekte Implementation von OpenID wichtig ist um die Sicherheit zu
-gewährleisten, ist es nicht ratsam OpenID ohne eine Library zu verwenden. In
-Python existiert zur Zeit nur eine Implementation von OpenID welche auch weiter
-entwickelt wird. Diese Library nennt sich python-openid und ist über den
-Python-Packet-Index\footnote{\url{http://pypi.python.org/pypi/python-openid/}}
-installierbar. Weiterentwickelt wird pyton-openid über das zugehörige Github
-Repository\footnote{\url{https://github.com/openid/python-openid}}.
+Da die korrekte Implementation von OpenID wichtig ist um die Sicherheit zu gewährleisten, ist es nicht ratsam OpenID ohne eine Library zu verwenden. In Python existiert zur Zeit nur eine Implementation von OpenID welche auch weiter entwickelt wird. Diese Library nennt sich python-openid und ist über den Python-Packet-Index\footnote{\url{http://pypi.python.org/pypi/python-openid/}} installierbar. Weiterentwickelt wird pyton-openid über das zugehörige Github Repository\footnote{\url{https://github.com/openid/python-openid}}.
 
 \subsubsection{Django}
 \label{ssub:Django}
-Da ein Paket für das Django Webframework erstellt werden soll gehört Django
-auch zu den Abhängigkeiten. Um `Class Based Views' benötigt man mindestens
-Version 1.3, welche zum Zeitpunkt dieser Arbeit bereits nicht mehr die
-aktuellste Version ist.
+Da ein Paket für das Django Webframework erstellt werden soll gehört Django auch zu den Abhängigkeiten. Um `Class Based Views' verwenden zu können benötigt man mindestens Version 1.3, welche zum Zeitpunkt dieser Arbeit bereits nicht mehr die aktuellste Version ist.

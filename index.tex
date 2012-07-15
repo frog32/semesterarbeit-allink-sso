@@ -34,7 +34,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \usepackage{hyphenat}
 \usepackage{ae} % Schöne Schriften für PDF-Dateien
 \usepackage{multirow} % tabellenzellen zusammenfassen
-% \usepackage{slashbox} % Tabellenbox welche diagonal getrennt ist
+\usepackage{float}
 
 % Tradmark
 \def\TTra{\textsuperscript{\texttrademark}}
@@ -157,7 +157,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 	\\
 	HSZ-T - Technische Hochschule Zürich}
 
-\date{Februar 2012 bis ...}
+\date{Februar 2012 bis Juli 2012}
 
 
 \begin{document}
@@ -186,10 +186,13 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \label{cha:Analyse IT Landschaft in der Allink}
   \input{chapters/analyse.tex}
   
-  
   \chapter{Evaluation}
   \label{cha:Evaluation}
   \input{chapters/evaluation.tex}
+  
+  \chapter{OpenID}
+  \label{cha:OpenID}
+  \input{chapters/openid.tex}
 
   \chapter{Design}
   \label{cha:Design}
@@ -204,6 +207,10 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \input{chapters/umsetzung.tex}
   
   \appendix
+  \chapter{Bestätigung}
+  \label{cha:bestätigung}
+  \input{chapters/bestaetigung.tex}
+  
   \listoffigures
   \listoftables
   
@@ -212,6 +219,6 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   % \lstlistoflistings
   
   \nocite{*}
-  \bibliographystyle{alpha}
+  \bibliographystyle{alphadin}
   \bibliography{cite}
 \end{document}
