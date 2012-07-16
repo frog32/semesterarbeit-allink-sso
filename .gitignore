@@ -19,9 +19,10 @@
 *.maf
 *.mtc
 *.mtc0
-*.pdf
+# don't ignore *.pdf because this ignores also all pdf files you'll include
 *.out
 *.synctex.gz
 *.toc
 *.xdy
 .DS_Store
+index.pdf
