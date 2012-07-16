@@ -1,0 +1,31 @@
+$ ./manage.py test -v2 admin_sso
+Creating test database for alias 'default' (':memory:')...
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table django_admin_log
+Creating table admin_sso_assignment
+Creating table admin_sso_openiduser
+Creating table admin_sso_nonce
+Creating table admin_sso_association
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+test_change_weight (admin_sso.tests.AuthModuleTests) ... ok
+test_domain_matches (admin_sso.tests.AuthModuleTests) ... ok
+test_domain_matches_and_username_doesnt_begin_with_foo (admin_sso.tests.AuthModuleTests) ... ok
+test_domain_matches_and_username_ends_with_bar (admin_sso.tests.AuthModuleTests) ... ok
+test_invalid_domain (admin_sso.tests.AuthModuleTests) ... ok
+test_login_twice_and_reuse_stored_openid (admin_sso.tests.AuthModuleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.113s
+
+OK

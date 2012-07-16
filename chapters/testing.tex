@@ -1,8 +1,25 @@
 %!TEX root = ../index.tex
+
+\section{Unittests}
+\label{sec:unittests}
+Die Logik welche die OpenID Konten mit den Lokalen Benutzerkonten verbindet wurde erst Programmiert, nachdem Unittests dafür Programmiert wurden. Diese Unittests laufen auch nachdem das Packet in ein Projekt eingebunden wurde noch und lassen somit ein Test unter Produktivbedingungen zu. Das Protokoll der Tests ist in Listing~\ref{lst:unittests} zu sehen.
+
+{\minipage{\linewidth}
+  \lstinputlisting[
+    language=sh,
+    breaklines=true,
+    caption=Resultat der Unittests,
+    basicstyle=\scriptsize,
+    captionpos=b,
+    label=lst:unittests]{include/unittest.txt}
+\endminipage}
+
+\section{Integrationstests}
+\label{sec:integrationstests}
 Da ein Single-Sign-On System aus Mindestens zwei Systemen besteht und in diesem Fall das eine bestehend ist, wird darauf verzichtet automatisierte Integrationstests zu erstellen. Stattdessen werden die wichtigsten Vorgänge mit Manuellen Testverfahren getestet.
 
-\section{Ausgangslage}
-\label{sec:TestingAusgangslage}
+\subsection{Ausgangslage}
+\label{sub:TestingAusgangslage}
 Um die Reproduzierbarkeit dieser Tests zu gewährleisten, müssen vor Beginn folgende Schritte getätigt werden.
 
 \begin{itemize}
@@ -15,7 +32,8 @@ Um die Reproduzierbarkeit dieser Tests zu gewährleisten, müssen vor Beginn fol
     \item Ein Testbenutzer ist in Google-Apps erstellt und aktiv.
 \end{itemize}
 
-
+\subsection{Testablauf}
+\label{sub:testablauf}
 \begin{tabular}{p{7cm} p{7cm}}
 Aktion & Erwartetes Resultat\\
 \hline
