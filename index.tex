@@ -45,7 +45,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 % Festlegung des Seitenstils (scrpage2)
 \pagestyle{scrheadings}
 \clearscrheadfoot
-\automark[chapter]{section}
+\automark[]{chapter}
 
 % \lehead{\sffamily\upshape\headmark}
 % \cehead{}
@@ -95,7 +95,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \usepackage{array,ragged2e}
 
 % glossary
-\usepackage[toc,xindy,acronym]{glossaries}
+\usepackage[toc,xindy,acronym, numberline]{glossaries}
 
 \usepackage[]{hyperref}
 \hypersetup{
@@ -166,8 +166,6 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \else
     \DeclareGraphicsExtensions{.eps, .jpg}
   \fi
-
-  \pagenumbering{Alph}
   
   \maketitle
   \input{chapters/abstract.tex}
@@ -176,15 +174,28 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   
   \tableofcontents
   
-  \pagenumbering{arabic}
+  \chapter{Personalienblatt}
+  \input{chapters/personalienblatt.tex}
+  
+  \chapter{Bestätigung}
+  \input{chapters/bestaetigung.tex}
   
   \chapter{Einleitung}
   \label{cha:Einleitung}
+  \pagenumbering{arabic}
   \input{chapters/einleitung.tex}
+
+  \chapter{Planung}
+  \label{cha:Planung}
+  \input{chapters/planung.tex}
   
-  \chapter{Analyse IT Landschaft in der Allink}
-  \label{cha:Analyse IT Landschaft in der Allink}
+  \chapter{Analyse}
+  \label{cha:Analyse}
   \input{chapters/analyse.tex}
+  
+  \chapter{Anforderungen}
+  \label{cha:Anforderungen}
+  \input{chapters/anforderungen.tex}
   
   \chapter{Evaluation}
   \label{cha:Evaluation}
@@ -205,12 +216,16 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   \chapter{Umsetzung}
   \label{cha:Umsetzung}
   \input{chapters/umsetzung.tex}
+
+  \chapter{Resultate}
+  \label{cha:Resultate}
+  \input{chapters/resultate.tex}
+
+  \chapter{Fazit}
+  \label{cha:Fazit}
+  \input{chapters/fazit.tex}
   
-  \appendix
-  \chapter{Bestätigung}
-  \label{cha:bestätigung}
-  \input{chapters/bestaetigung.tex}
-  
+  \appendix  
   \listoffigures
   \listoftables
   

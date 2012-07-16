@@ -10,7 +10,7 @@ OpenID wurde entwickelt damit sich Benutzer an fremden Webseiten anmelden könne
 Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über OpenID. Es handelt sich hier um den einfachsten Ablauf. Es gibt noch weitere Abläufe in denen zum Beispiel der Provider und die Relying-Party ein Shared Secret mittels Diffie Hellman\cite{rfc2631} vereinbaren um damit die OpenID-Response mit einem HMAC\cite{rfc2104} zu versehen. Damit sind die Schritte 9 und 10 nicht mehr nötig, da nach dem Schritt 8 die Relying-Party bereits sicherstellen kann, dass die Response nicht verändert wurde und vom Provider stammt.
 \begin{figure}[H]
   \centering
-	\includegraphics[width=0.70\textwidth]{include/openid1.pdf}
+	\includegraphics[width=0.9\textwidth]{include/openid1.pdf}
 	\caption{OpenID Ablauf}
 	\label{fig:openid_ablauf}
 \end{figure}

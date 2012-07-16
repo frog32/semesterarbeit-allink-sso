@@ -1,0 +1,43 @@
+%!TEX root = ../index.tex
+Das sicher wichtigste Resultat dieser Arbeit bildet die funktionsfähige Applikation welche es ermöglicht sich mit einer OpenID an einem Administrationsbereich anzumelden. Diese Applikation wird bei jeder neuen Webseite eingesetzt und wurde zudem in den wichtigsten bestehenden Webseiten bereits eingebaut.
+
+\section{Erfüllung der Anforderungen}
+\label{sec:erfüllung_der_anforderungen}
+Django-admin-sso erfüllt alle in Kapitel~\ref{sec:funktionale_anforderungen} definierten Anforderungen und lässt sich einfach in bestehende und neue Projekte integrieren. Die Installation des Paketes ist über den Python Packet Index und einem Python Paket-Management sehr einfach. Die technischen Anforderungen aus Kapitel~\ref{sec:technische_anforderungen} werden meines Erachtens gut erfüllt.
+
+\section{Reaktionen}
+\label{sec:reaktionen}
+Am 4.Juni 2012 habe ich spontan das Projekt an der Djangoconeu 2012~\footnote{http://2012.djangocon.eu/} während eines Lightning Talks vorgestellt. Der Talk bestand im wesentlichen in einer während der Konferenz vorbereiteten live Demonstration. Nach dem Talk haben sich mehrere Personen bei mir gemeldet und mir erzählt, dass auch sie schon lange auf der Suche nach einer solchen Lösung waren.
+
+Das Projekt hat zur Zeit~\footnote{Stand vom 16.Juli 2012} 15 Watchers auf Github und und bisher 4 Pull Requests mit kleineren Anpassungen. Die Version 0.1.1 hat bereits 164 Downloads über den Python Packet Index. Auf meine Anfrage ob sie django-admin-sso produktiv einsetzen bekam ich von Matthias Kestenholz und Marc Tamlyn folgende Antworten:
+
+\paragraph{Matthias Kestenholz}
+Programmierung \& Qualitätssicherung bei FEINHEIT GmbH
+\begin{quote}
+  Hi Marc
+
+  Unfortunately we aren't using sso yet, but I'd very much like to.
+
+  It certainly gave us a few good ideas how to solve the problem where
+  former employees still have access to many websites just because they
+  know the passwords we use. I think we should start using it on all
+  sites except for a few special ones (not that I'd think of any
+  projects in particular, but there are pages which have a different
+  audience, especially webapps or plattforms).
+
+
+  Thanks \\
+  Matthias
+\end{quote}
+
+\paragraph{Marc Tamlyn}
+Developer bei INCUNA LTD.
+\begin{quote}
+  Hi Marc,
+
+  We have implemented admin-sso into our base project, and it is being used on all new applications. There may be some apps where we can't use it due to clients having odd requirements on security, but it is not enabled by default.
+
+  Thanks for such a useful project!
+
+  Marc
+\end{quote}
