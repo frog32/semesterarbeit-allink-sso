@@ -7,30 +7,34 @@ Der Name eines Softwareprojekts kann grossen Einfluss darauf haben, wie viel es 
 
 \section{Opensource}
 \label{sec:opensource}
-Da es der Philosophie von allink gehört, entwickelte Tools welche auch für andere Agenturen und Webentwickler von Nutzen sein könnten zu veröffentlichen. Dies aus zwei verschiedenen Gründen auf welche hier kurz eingegangen wird.
+Es gehört zur Philosophie von allink, entwickelte Tools welche auch für andere Agenturen und Webentwickler von Nutzen sein könnten, zu veröffentlichen. Dies aus zwei verschiedenen Gründen auf welche hier kurz eingegangen wird.
 
 \paragraph{Steigerung der Reputation}
 \label{par:steigerung_der_reputation}
-Um allink für potentielle Mitarbeiter im Webbereich attraktiver zu machen.
+Um allink für potentielle Mitarbeiter im Webbereich attraktiver zu machen und zu zeigen, dass allink im Stande ist solide Applikationen zu entwickeln.
 \paragraph{Chance auf Mitarbeit Dritter}
 \label{par:chance_auf_mitarbeit_dritter}
-Wenn ein von allink veröffentlichtes Tool von Dritten genutzt wird, besteht die Chance, dass diese das Tool weiterentwickeln oder bestehende Fehler beheben.
+Wenn ein von allink veröffentlichtes Tool von Dritten genutzt wird, besteht die Chance, dass diese das Tool weiterentwickeln, Fehler melden, oder diese beheben.
 
 \subsection{Lizenz}
 \label{sub:lizenz}
 Um ein Tool für Dritte nutzbar zu machen und um zu gewährleisten, dass diese auch den Quellcode des Tools ändern dürfen, muss das ganze Tool unter einer Softwarelizenz, welche dies gestattet, veröffentlicht werden. Die drei Klausel BSD Lizenz\footnote{\url{http://www.opensource.org/licenses/BSD-3-Clause}} lässt dem Lizenznehmer genügend Freiheiten um den Quellcode zu verwenden wo er will. Das Framework Django ist ebenfalls unter der drei Klausel BSD Lizenz veröffentlich worden.
 
+\subsection{Bestandteile aus anderen Projekten}
+\label{sub:bestandteile_aus_anderen_projekten}
+In dieser Arbeit wurde zusätzlich zu Python OpenID die Implementierung eines OpenID Store-Backends aus django-openid-auth zurückgegriffen. Diese Datei wurde ebenfalls under der drei Klausel BSD Lizenz veröffentlicht und ist somit lizenzrechtlich kompatibel\footnote{\url{http://www.dwheeler.com/essays/floss-license-slide.html}} zu django-admin-sso. Um den Lizenzbedingungen Rechnung zu tragen wurde die Datei mit komplettem Lizenz-Text und Herkunftsangaben übernommen.
+
 \subsection{Versionsverwaltung}
 \label{sub:versionsverwaltung}
-Es wurde \glossary{Git} für die Versionierung verwendet da dies dem Standard der allink gehört. Es wurde ein zentrales Repository\footnote{\url{https://github.com/frog32/django-admin-sso}} auf Github eingerichtet um den Quellcode zu veröffentlichen.
+Es wurde \gls{Git} für die Versionierung verwendet, da dies dem Standard der allink gehört. Es wurde ein zentrales Repository\footnote{\url{https://github.com/frog32/django-admin-sso}} auf Github eingerichtet um den Quellcode zu veröffentlichen.
 
 \section{Python Paket}
 \label{sec:Python Paket}
-Es gibt zwei grundsätzlich verschiedene Distributionsarten für Python Pakete. ``Source'' Distributionen sind Archive mit den benötigten Python Dateien zusammen mit einem Setup-Script. ``Builded'' Distributionen hingegen sind für ein bestimmtes System gebaut und lassen sich typischerweise über den Systemeigenen Packet Manager oder im Fall von Windows, über ein Installationsprogramm installieren. Python Pakete welche für den Gebrauch in Webapplikationen konzipiert sind, sind normalerweise als ``Source''-Distribution erhältlich. Diese ``Source''-Distributionen werden dann mit easy\_install\footnote{\url{http://packages.python.org/distribute/easy_install.html}} oder pip\footnote{\url{http://www.pip-installer.org/}} Installiert. Alternativ können ``Source''-Distributionen auch durch simples Entpacken und Ausführen des Installations-Skripts installiert werden. Da ``django-admin-sso'' nur für die Verwendung in Webapplikationen vorgesehen ist, wird nur eine ``Source''-Distribution erstellt.
+Es gibt zwei grundsätzlich verschiedene Distributionsarten für Python Pakete. ``Source'' Distributionen sind Archive mit den benötigten Python Dateien zusammen mit einem Setup-Script. ``Builded'' Distributionen hingegen sind für ein bestimmtes System gebaut und lassen sich typischerweise über den systemeigenen Packet Manager oder im Fall von Windows, über ein Installationsprogramm installieren. Python Pakete welche für den Gebrauch in Webapplikationen konzipiert sind, sind normalerweise als ``Source''-Distribution erhältlich. Diese ``Source''-Distributionen werden dann mit easy\_install\footnote{\url{http://packages.python.org/distribute/easy_install.html}} oder pip\footnote{\url{http://www.pip-installer.org/}} installiert. Alternativ können ``Source''-Distributionen auch durch simples Entpacken und Ausführen des Installations-Skripts installiert werden. Da ``django-admin-sso'' nur für die Verwendung in Webapplikationen vorgesehen ist, wird nur eine ``Source''-Distribution erstellt.
 
 \subsection{Paketerstellung}
 \label{sub:paketerstellung}
-Ein Python-Paket wird durch verschiedene Dateien charakterisiert. Auf die für die Distribution verwendete Tateien wird in Tabelle~\ref{tab:paket_inhalt} eingegangen. Im Manifest wurden zusätzlich noch nicht existierende Dateien erwähnt welche für eine Übersetzung des Paketes in mehrere Sprachen verwendet werden.
+Ein Python-Paket wird durch verschiedene Dateien charakterisiert. Auf die für die Distribution verwendete Dateien wird in Tabelle~\ref{tab:paket_inhalt} eingegangen. Im Manifest wurden zusätzlich noch nicht existierende Dateien erwähnt, welche für eine Übersetzung des Paketes in mehrere Sprachen verwendet werden.
 
 \begin{table}[ht]
   \centering
@@ -55,6 +59,6 @@ Ein Python-Paket wird durch verschiedene Dateien charakterisiert. Auf die für d
 
 \subsection{Registration}
 \label{sub:registration}
-Der ``Python Packet Index''\footnote{\url{http://pypi.python.org/}} bildet die zentrale Registrierungsstelle für alle Python Pakete. Es ist ratsam jedes Paket welches für den freien Gebrauch bestimmt ist in diesem Index zu registrieren.\footnote{\url{http://pypi.python.org/pypi/django-admin-sso/}}
+Der ``Python Packet Index''\footnote{\url{http://pypi.python.org/}} bildet die zentrale Registrierungsstelle für alle Python Pakete. Es ist ratsam jedes Paket, welches für den freien Gebrauch bestimmt ist, in diesem Index zu registrieren.\footnote{\url{http://pypi.python.org/pypi/django-admin-sso/}}
 
 Zusätzlich zum ``Python Packet Index'' wurde das Paket auch in den Index von ``Django Packages''\footnote{\url{http://www.djangopackages.com/packages/p/django-admin-sso/}} eingetragen. Diese Platform wird von vielen Django-Entwicklern verwendet um neue Pakete zu evaluieren.

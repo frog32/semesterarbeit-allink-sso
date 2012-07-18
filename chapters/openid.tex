@@ -1,5 +1,5 @@
 %!TEX root = ../index.tex
-Da die Wahl des zu verwendenden Protokolls auf OpenID fällt, wird an dieser Stelle die Funktionsweise von OpenID erklährt. Es ist nicht Bestandteil dieser Arbeit das OpenID Protokoll in Python zu implementieren, da dazu bereits eine Library existiert welche auch gewartet wird. Ryan Boyd von Google empfielt in einem Talk ausdrücklich davon abzusehen openid selber zu implementieren \cite[0:16:08]{googleioopenid}.
+Da die Wahl des zu verwendenden Protokolls auf OpenID fällt, wird an dieser Stelle die Funktionsweise von OpenID erklärt. Es ist nicht Bestandteil dieser Arbeit das OpenID Protokoll in Python zu implementieren, da dazu bereits eine Library existiert welche auch gewartet wird. Ryan Boyd von Google empfiehlt in einem Talk ausdrücklich davon abzusehen OpenID selber zu implementieren \cite[0:16:08]{googleioopenid}.
 
 \section{Übersicht}
 \label{sec:übersicht}
@@ -7,7 +7,7 @@ OpenID wurde entwickelt damit sich Benutzer an fremden Webseiten anmelden könne
 
 \section{Ablauf}
 \label{sec:ablauf}
-Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über OpenID. Es handelt sich hier um den einfachsten Ablauf. Es gibt noch weitere Abläufe in denen zum Beispiel der Provider und die Relying-Party ein Shared Secret mittels Diffie Hellman\cite{rfc2631} vereinbaren um damit die OpenID-Response mit einem HMAC\cite{rfc2104} zu versehen. Damit sind die Schritte 9 und 10 nicht mehr nötig, da nach dem Schritt 8 die Relying-Party bereits sicherstellen kann, dass die Response nicht verändert wurde und vom Provider stammt.
+Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über OpenID. Es handelt sich hierbei um den einfachsten Ablauf. Es gibt noch weitere Abläufe in denen zum Beispiel der Provider und die Relying-Party ein Shared Secret mittels Diffie Hellman\cite{rfc2631} vereinbaren um damit die OpenID-Response mit einem HMAC\cite{rfc2104} zu versehen. Damit sind die Schritte 9 und 10 nicht mehr nötig, da nach dem Schritt 8 die Relying-Party bereits sicherstellen kann, dass die Response nicht verändert wurde und vom Provider stammt.
 \begin{figure}[H]
   \centering
 	\includegraphics[width=0.9\textwidth]{include/openid1.pdf}
@@ -35,4 +35,4 @@ Die Sicherheit von OpenID beruht vor allem auf dem Vertrauen in den OpenID-Provi
 
 \section{Erweiterungen}
 \label{sec:erweiterungen}
-Um über OpenID an die E-Mail-Adresse eines Benutzers zu gelangen, können zwei verschiedene Erweiterungen verwendet werden. Dies sind Simple Registration\cite{openid/sreg1.0} und Attribute Exchange\cite{openid/ax1.0}. Falls vorhanden wird Attribute Exchange vorgezogen, da Simple Registration einst als Minimalansatz entwickelt wurde und Attribute Exchange um einiges Umfangreicher ist. 
+Um über OpenID an die E-Mail-Adresse eines Benutzers zu gelangen, können zwei verschiedene Erweiterungen verwendet werden. Dies sind Simple Registration\cite{openid/sreg1.0} und Attribute Exchange\cite{openid/ax1.0}. Falls vorhanden wird Attribute Exchange vorgezogen, da Simple Registration einst als Minimalansatz entwickelt wurde und Attribute Exchange um einiges umfangreicher ist. 

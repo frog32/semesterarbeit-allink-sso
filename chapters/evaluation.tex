@@ -3,18 +3,18 @@ Anwendungen welche mit externen Systemen kommunizieren, müssen auf einem Standa
 
 \section{Wahl eines Systems}
 \label{sec:Wahl eines Systems}
-Es gibt diverse Standards mit welchen man einen Benutzer identifizieren kann. Jedoch sind nicht alle davon für Webapplikationen geeignet. Um die Übersicht zu wahren wird hier nur auf zwei Typische Web Standards eingegangen. Damit auch eine Authentifizierung über Mac OS X Server erreicht werden könnte, wird zusätzlich noch kurz auf LDAP eingegangen.
+Es gibt diverse Standards mit welchen man einen Benutzer identifizieren kann. Jedoch sind nicht alle davon für Webapplikationen geeignet. Um die Übersicht zu wahren, wird hier nur auf zwei Typische Web Standards eingegangen. Damit auch eine Authentifizierung über Mac OS X Server erreicht werden könnte, wird zusätzlich noch kurz auf LDAP eingegangen.
 
 \subsubsection{OpenID}
 \label{ssub:OpenID}
 Der offene Standard Openid wird von der OpenID
-Foundation\footnote{\url{http://openid.net/foundation/}}, welche dafür gegründet wurde Marketing zu betreiben und die Rechte an der Marke OpenID zu wahren, gepflegt. Der Standard wurde dafür entwickelt, um es einem Benutzer welcher über eine OpenID verfügt zu ermöglichen sich an Webseiten welche OpenID unterstützen anzumelden ohne dass er sich einen neuen Benutzername und ein neues Passwort ausdenken muss. Das System welches die OpenID zur Verfügung stellt wird dabei \gls{OpenID-Provider} und die Webseiten an der sich der Benutzer anmeldet \glspl{OpenID-Relying-Party} genannt.
+Foundation\footnote{\url{http://openid.net/foundation/}}, welche dafür gegründet wurde Marketing zu betreiben und die Rechte an der Marke OpenID zu wahren, gepflegt. Der Standard wurde dafür entwickelt, es einem Benutzer welcher über eine OpenID verfügt zu ermöglichen sich an Webseiten welche OpenID unterstützen anzumelden, ohne dass er sich einen neuen Benutzername und ein neues Passwort ausdenken muss. Das System welches die OpenID zur Verfügung stellt, wird dabei \gls{OpenID-Provider} und die Webseiten an der sich der Benutzer anmeldet \glspl{OpenID-Relying-Party} genannt.
 
 OpenID ist weit verbreitet und wird von vielen grösseren Webportalen unterstützt. Normalerweise erhält die \gls{OpenID-Relying-Party} nach dem ein Benutzer über OpenID eingeloggt hat, einen Identifier in form einer URL. Mit der attribute exchange Erweiterung lassen sich weitere Informationen über den Benutzer vom \gls{OpenID-Provider} beziehen.
 
 \subsubsection{OAuth}
 \label{ssub:OAuth}
-Auch OAuth\footnote{\url{http://oauth.net}} ist ein offener Standard und ist zur Zeit in der Version 1.0 im RFC 5849\cite{rfc5849} aktuell. Jedoch verwenden die meisten Dienste heute schon OAuth 2.0 welches als Working Draft\footnote{\url{http://tools.ietf.org/html/draft-ietf-oauth-v2-26}} verfügbar ist. OAuth ist nicht für Authentifizierung gebaut sondern für Autorisierung. Es ermöglicht einem Benutzers einer Webapplikation die Vergabe von Rechten an einen weiteren Dienst, damit dieser bei der ersten Webapplikation API Funktionen aufrufen kann welche er ohne das Einverständnis des Benutzers keinen Zugriff hätte. Es lässt sich mit OAuth eine Pseudo-Authentifizierung durchführen, welche darauf beruht, dass nur der Benutzer diese Rechte erteilen kann. Dieses System wird von Facebook für die ``Login with Facebook'' verwendet.
+Auch OAuth\footnote{\url{http://oauth.net}} ist ein offener Standard und ist zur Zeit in der Version 1.0 im RFC 5849\cite{rfc5849} aktuell. Jedoch verwenden die meisten Dienste heute schon OAuth 2.0 welches als Working Draft\footnote{\url{http://tools.ietf.org/html/draft-ietf-oauth-v2-26}} verfügbar ist. OAuth ist nicht für Authentifizierung gebaut sondern für Autorisierung. Es ermöglicht einem Benutzers einer Webapplikation die Vergabe von Rechten an einen weiteren Dienst, damit dieser bei der ersten Webapplikation API Funktionen aufrufen kann, auf welche er ohne das Einverständnis des Benutzers keinen Zugriff hätte. Es lässt sich mit OAuth eine Pseudo-Authentifizierung durchführen, welche darauf beruht, dass nur der Benutzer diese Rechte erteilen kann. Dieses System wird von Facebook für die ``Login with Facebook'' verwendet.
 
 \subsubsection{LDAP}
 \label{ssub:LDAP}
@@ -22,11 +22,11 @@ Obwohl es unüblich ist für Webapplikationen LDAP\cite{rfc4511} zu verwenden, w
 
 \section{Nutzwert-Analyse}
 \label{sec:Nutzwert-Analyse}
-Da mehrere Systeme in der allink vorhanden sind welche sich für ein zentrales Login eignen, wurde eine Nutzwert-Analyse durchgeführt um die einzelnen Systeme miteinander zu vergleichen. Dabei wurde vor allem Wert darauf gelegt, dass nicht noch ein Login von den Mitarbeitern gemerkt werden muss.
+Da mehrere Systeme in der allink vorhanden sind, welche sich für ein zentrales Login eignen, wurde eine Nutzwert-Analyse durchgeführt um die einzelnen Systeme miteinander zu vergleichen. Dabei wurde vor allem Wert darauf gelegt, dass sich die Mitarbeiter nicht ein weiteres Login merken müssen.
 
 \subsection{Gewichtung}
 \label{sub:Gewichtung}
-Die Gewichtung der einzelnen Punkte wurde in Zusammenarbeit mit der Allink Geschäftsleitung entwickelt. Jedoch war zu diesem Zeitpunkt noch nicht bekannt, welches System bei welchem Punkt seine Stärken ausspielen kann. Die so festgelegte Gewichtung kann ist Abbildung~\ref{fig:nutzwertanalyse gewichtung} zu sehen.
+Die Gewichtung der einzelnen Punkte wurde in Zusammenarbeit mit der allink Geschäftsleitung erarbeitet. Jedoch war zu diesem Zeitpunkt noch nicht bekannt, welches System bei welchem Punkt seine Stärken ausspielen kann. Die so festgelegte Gewichtung ist in Abbildung~\ref{fig:nutzwertanalyse gewichtung} zu sehen.
 
 \begin{figure}[H]
     \centering 
@@ -37,7 +37,7 @@ Die Gewichtung der einzelnen Punkte wurde in Zusammenarbeit mit der Allink Gesch
 
 \subsection{Bewertung}
 \label{sub:Bewertung}
-Die Systeme welche in der Analyse beschrieben wurden, wurden gemäss der in der Gewichtung genannten Punkte bewertet. Jeder Bewertungspunkt wurde nach der Skala in Tabelle~\ref{tab:nutzwertanalyse skala} bewertet. Nachfolgend wird auf die einzelnen Punkte eingegangen.
+Die zuvor beschriebenen Systeme, wurden gemäss der in der Gewichtung genannten Punkte bewertet. Jeder Punkt der Nutzwert-Analyse wurde nach der Skala in Tabelle~\ref{tab:nutzwertanalyse skala} klassiert. Nachfolgend wird auf die einzelnen Punkte eingegangen.
 
 \begin{table}[h]
     \centering
@@ -61,7 +61,7 @@ Die Systeme welche in der Analyse beschrieben wurden, wurden gemäss der in der 
 
 \subsubsection{Mitarbeiter kennen ihre Credentials}
 \label{ssub:Mitarbeiter kennen ihre Credentials}
-Da das System den Mitarbeitern die Arbeit erleichtern soll wurde hier anhand der Umfrage welche unter Kapitel~\ref{sec:Mitarbeiter} erwähnt wurde verteilt.
+Das System soll den Mitarbeitern die Arbeit erleichtern. Die Bewertung für diesen Punkt wurde anhand der Umfrage aus Kapitel~\ref{sec:Mitarbeiter} erstellt.
 
 \begin{tabular}{lc}
 Google Apps & 3\\
@@ -77,11 +77,10 @@ Unter diesem Punkt wurde beurteilt von wie vielen Mitarbeitern das geprüfte Sys
 wird zur Zeit von allen Mitarbeitern verwendet, da darüber die E-Mail Dienste laufen. Zudem verwendet die IT und die Geschäftsleitung Google Docs und Google Sites.
 \paragraph{Basecamp}
 \label{par:1.2Basecamp}
-wird vor allem von der Projektleitung verwendet, der Rest der Mitarbeiter verwendet Basecamp vor allemfür die Zeiterfassung, welche aber über ein Widget
-geschieht und so nicht viel mit Basecamp zu tun hat.
+wird vor allem von der Projektleitung verwendet. Der Rest der Mitarbeiter verwendet Basecamp vor allem für die Zeiterfassung, welche aber über ein Widget geschieht und so nicht viel mit Basecamp zu tun hat.
 \paragraph{Mac OS X Server}
 \label{par:1.2Mac OS X Server}
-wird von allen Mitarbeitern für den Austausch von Dateien und für das Backup verwendet. Jedoch sind sich die meisten Mitarbeiter nicht bewusst wo sie dieses System verwenden, da sie sich nie anmelden müssen.
+wird von allen Mitarbeitern für den Austausch von Dateien und für das Backup verwendet. Jedoch sind sich die meisten Mitarbeiter nicht bewusst wo sie dieses System verwenden, da sie sich dafür nie anmelden müssen.
 
 \begin{tabular}{lc}
 Google Apps & 4\\
@@ -89,9 +88,9 @@ Basecamp & 2\\
 Mac OS X Server & 2\\
 \end{tabular}
 
-\subsubsection{Adminbereich ist bekannt}
+\subsubsection{Administrations-Bereich ist bekannt}
 \label{ssub:Adminbereich ist bekannt}
-Da man für jeden neuen Mitarbeiter einen Account einrichten muss, und falls ein Mittarbeiter die Allink verlässt diesen Account wieder sperren muss, muss zumindest die Geschäftsleitung vertraut sein mit den entsprechenden Tools.
+Da man für jeden neuen Mitarbeiter einen Account einrichten muss, und falls ein Mittarbeiter die allink verlässt diesen Account wieder sperren muss, muss zumindest die Geschäftsleitung vertraut sein mit den entsprechenden Tools.
 \paragraph{Google Apps}
 \label{par:1.3Google Apps}
 wird von der Informatik Leitung regelmässig verwendet. Daneben wird regelmässig Google Apps für Kunden eingerichtet und jeder Informatiker kennt sich im Administrationsbereich aus. Zudem sollte auch die gesamte Geschäftsleitung über Grundkenntnisse verfügen.
@@ -110,7 +109,7 @@ Mac OS X Server & 1\\
 
 \subsubsection{OpenID}
 \label{ssub:Bewertung OpenID}
-OpenID ist die erste Wahl, da es in Python schon unterstützt wird und es dafür gedacht ist sich als Benutzer an einem System anzumelden.
+OpenID ist die erste Wahl, da es in Python schon unterstützt wird und es dafür konzipiert ist Benutzer über ein zentrales System anzumelden.
 \paragraph{Google Apps}
 \label{par:2.1Google Apps}
 unterstützt OpenID und wird auch auf der Webseite der OpenID Foundation gelistet.
@@ -148,10 +147,10 @@ Mac OS X Server & 0\\
 
 \subsubsection{anderes System}
 \label{ssub:anderes System}
-Um für den Fall, dass keines unserer Systeme geeignet ist um einen Benutzer mit OpenID oder OAuth zu authentifizieren, eine weitere Möglichkeit zu haben, wurde auch überprüft was unsere Systeme für weitere Möglichkeiten bieten.
+Für den Fall, dass keines unserer Systeme geeignet ist um einen Benutzer mit OpenID oder OAuth zu authentifizieren, wurden weitere Möglichkeiten unserer Systeme überprüft.
 \paragraph{Google Apps}
 \label{par:2.3Google Apps}
-bietet neben den schon erwähnten Möglichkeiten noch Unterstützung für SAML\footnote{\url{http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security}} jedoch zur Zeit nur um Benutzer von Google Diensten über ein Drittsystem zu Authentifizieren.
+bietet neben den schon erwähnten Möglichkeiten noch Unterstützung für SAML\footnote{\url{http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security}} jedoch zur Zeit nur um Benutzer von Google Diensten über ein Drittsystem zu authentifizieren.
 \paragraph{Basecamp}
 \label{par:2.3Basecamp}
 bietet keine weitere Möglichkeiten an.

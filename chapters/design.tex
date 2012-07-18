@@ -4,15 +4,16 @@
 
 \subsection{Zu verwendendes System}
 \label{sub:Zu verwendendes System}
-Aus der Evaluation geht hervor, dass eine Anbindung an die OpenID Dienste von Google wohl am meisten Sinn macht. Google Apps ist ein fester Bestandteil der Arbeitsmittel jedes Mitarbeiters der Allink.
+Aus der Evaluation geht hervor, dass eine Anbindung an die OpenID Dienste von Google wohl am meisten Sinn macht. Google Apps ist ein fester Bestandteil der Arbeitsmittel jedes Mitarbeiters der allink.
 
 \subsection{Anmelde-Mechanismus}
 \label{sub:Anmelde-Mechanismus}
-Da in den meisten Fällen keine granulare Unterteilung der Benutzerrechte jedes einzelnen Mitarbeiters nötig ist. Da es viel mehr darum geht jedem Mitarbeiter von Allink Zugriff zu den Admin-Bereichen sämtlicher Webapplikationen zu gewähren und beim Enden dessen Arbeitsverhältnis diese Rechte wieder zu entziehen. Wird wie bisher für jede Webapplikation ein Benutzer mit vollen Administrator-Rechten erstellt. Bei erfolgreichem Anmelden über Google Apps ist der Mitarbeiter danach im Admin-Bereich mit diesem Benutzer angemeldet. Der Mitarbeiter bleibt danach für die Dauer seiner Session angemeldet.
+In den meisten Fällen ist keine granulare Unterteilung der Benutzerrechte jedes einzelnen Mitarbeiters nötig. Den es geht viel mehr darum, jedem Mitarbeiter von allink Zugriff zu den Administrations-Bereichen sämtlicher Webapplikationen zu gewähren und beim Enden des Arbeitsverhältnisses diese Rechte wieder zu entziehen. Aufgrund dessen wird wie bisher für jede Webapplikation ein Benutzer mit vollen Administrator-Rechten erstellt. Bei erfolgreichem Anmelden über Google Apps ist der Mitarbeiter danach im Administrations-Bereich mit diesem Benutzer angemeldet und bleibt für die Dauer seiner Session zugelassen.
+Es ist möglich Regeln für die automatische Zuweisung von lokalen Benutzerkonten zu OpenID Benutzern zu erstellen. Diese Regeln können unterschiedlich gewichtet werden um fälle in denen zum Beispiel wenige OpenID Benutzer Administrator-Rechte haben und alle übrigen Mitarbeiter Autoren-Rechte erhalten sollen.
 
-\subsection{Wahl eines OpenID Providers}
+\subsection{Wahl eines OpenID-Providers}
 \label{sub:Wahl eines OpenID Providers}
-Da die Applikation um zu funktionieren nur einen OpenID Provider benötigt. Ist sie zumindest Theoretisch mit jedem beliebigen OpenID Provider verwendbar. Da wir die Mitarbeiter mit Hilfe der vom OpenID Provider verlangten E-Mail-Adresse identifizieren, und ein OpenID Provider diese E-Mail-Adresse fälschen könnte, kann der OpenID Provider nicht während des Login-Prozesses gewählt werden. Der Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard verwendet.
+Die Applikation benötigt um zu funktionieren einen OpenID-Provider. Theoretisch lässt sie sich mit jedem beliebigen OpenID-Provider verwenden. Da wir die Mitarbeiter mit Hilfe der vom OpenID-Provider verlangten E-Mail-Adresse identifizieren, und ein OpenID-Provider diese E-Mail-Adresse fälschen könnte, kann der OpenID-Provider nicht während des Login-Prozesses gewählt werden. Der Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard verwendet.
 
 \subsection{Abhängigkeiten}
 \label{sub:Abhängigkeiten}
