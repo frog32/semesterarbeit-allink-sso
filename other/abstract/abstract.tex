@@ -1,0 +1,83 @@
+%
+%  Design Review Protokoll
+%
+%  Created by Marc Egli on 2012-05-15.
+%  Template by Silvan Spross
+%
+\documentclass[]{report}
+\usepackage[ngerman]{babel}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Setup for fullpage use
+\usepackage{fullpage}
+
+% Running Headers and footers
+%\usepackage{fancyhdr}
+
+% Multipart figures
+%\usepackage{subfigure}
+
+% More symbols
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+\usepackage{url}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+\else
+    \usepackage{graphicx}
+\fi
+
+\title{Single Sign-On Lösung für Django}    
+\author{Studierender - Marc Egli\\
+    Projektbetreuer - Lukas Eppler\\
+    Auftraggeber - Silvan Spross, allink.creative\\
+    \\
+    HSZ-T - Technische Hochschule Zürich}
+    
+\date{5. Mai 2012}
+
+\begin{document}
+    \pagestyle{empty}
+    \vspace{0.5cm}
+    \begin{center}
+        \bf
+        \Huge
+        Single Sign-On Lösung für Django
+    \end{center}
+    \begin{center}
+        \Large
+        Semesterarbeit in Informatik\\
+        \vspace{1cm}
+        Studierender - Marc Egli\\
+        \vspace{0.3cm}
+        Projektbetreuer - Lukas Eppler\\
+        \vspace{0.3cm}
+        Auftraggeber - Silvan Spross, allink\\
+        \vspace{0.5cm}
+        HSZ-T - Technische Hochschule Zürich\\
+        \vspace{0.3cm}
+        Februar 2012 bis Juli 2012
+    \end{center}
+    \vspace{2cm}
+    \large
+    \input{../../chapters/abstract.tex}
+
+
+  
+\end{document}
