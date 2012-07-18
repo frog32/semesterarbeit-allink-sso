@@ -24,12 +24,12 @@ Um die Reproduzierbarkeit dieser Tests zu gewährleisten, müssen vor Beginn fol
 
 \begin{itemize}
     \item Das Cache des Browsers muss geleert werden.
-    \item Es darf keine offene Google-Apps Sitzung bestehen. Falls ein Benutzer
+    \item Es darf keine offene Google Apps Sitzung bestehen. Falls ein Benutzer
           angemeldet ist, muss dieser Abgemeldet werden.
     \item Die Datenbank des Testsystems muss neu Erstellt werden.
     \item Sämtliche Cookies welche zum Testsystem gehören müssen gelöscht
           werden.
-    \item Ein Testbenutzer ist in Google-Apps erstellt und aktiv.
+    \item Ein Testbenutzer ist in Google Apps erstellt und aktiv.
 \end{itemize}
 
 \subsection{Testablauf}
@@ -40,7 +40,7 @@ Aktion & Erwartetes Resultat\\
 Drücken des ``Login mit OpenID'' Buttons im Admin & Der Browser wechselt zum Google Login\\
 Eingeben der Benutzerdaten & Django Admin Startseite wird angezeigt und der zugewiesene Benutzer ist angemeldet\\
 Löschen der Session des Testsystems und neu laden der Seite & Die Login-Seite erscheint\\
-Sperren des Benutzers in Google-Apps mit einem anderen Browser & Kein Resultat erwartet\\
+Sperren des Benutzers in Google Apps mit einem anderen Browser & Kein Resultat erwartet\\
 Drücken des ``Login mit OpenID'' Buttons im Admin & Der Browser wechselt zum Google Login\\
 Eingeben der Benutzerdaten & Benutzer darf sich nicht anmelden können\\
 \end{tabular}

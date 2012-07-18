@@ -95,7 +95,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \usepackage{array,ragged2e}
 
 % glossary
-\usepackage[toc,xindy,acronym, numberline]{glossaries}
+\usepackage[toc, numberedsection, acronym, numberline, nonumberlist]{glossaries}
 
 \usepackage[]{hyperref}
 \hypersetup{
@@ -108,8 +108,8 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   pdftitle={Semesterarbeit},   
   pdfauthor={Marc Egli},
   pdfsubject={Single Sign-On Lösung für Django},
-  pdfcreator={TeX Live 2011},
-  pdfproducer={pdfTeX, Version 3.1415926-2.3-1.40.12},
+  pdfcreator={TeX Live 2012},
+  pdfproducer={pdfTeX 3.1415926-2.4-1.40.13},
   pdfnewwindow=true,      % links in new window
   colorlinks=true,       % false: boxed links; true: colored links
   % linkcolor=blue,          % color of internal links
@@ -119,7 +119,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
   linkcolor=black,          % color of internal links
   citecolor=black,        % color of links to bibliography
   filecolor=black,      % color of file links
-  urlcolor=black          % color of external links
+  urlcolor=black,          % color of external links
 }
 
 \ifpdf
@@ -127,7 +127,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \else
     \usepackage{graphicx}
 \fi
-
+\pagenumbering{Alph}
 \makeatletter 
 \let\orgdescriptionlabel\descriptionlabel 
 \renewcommand*{\descriptionlabel}[1]{% 
@@ -141,8 +141,9 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 } 
 \makeatother 
 
-\include{glossary}
 \makeglossaries
+\include{glossary}
+
 
 %  --------------------------------------------------------------------------
 %  Start Document

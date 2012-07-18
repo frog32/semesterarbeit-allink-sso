@@ -1,22 +1,12 @@
 %!TEX root = ../index.tex
 \section{Ausgangslage}
 \label{sec:EinleitungAusgangslage}
-Die Agentur allink.creative Betreibt für ihre Kunden diverse Django basierte 
-Webapplikationen. Diese Applikationen besitzen jeweils einen 
-Administrations-Bereich, in welchem man sich mit Benutzername und Passwort 
-einloggen kann. Da allink.creative anfangs 2012 fast 100 solche 
-Webapplikationen in Betrieb hat, werden die Login-Daten zum Teil mehrfach 
-verwendet.
+Die Agentur allink Betreibt für ihre Kunden diverse Django basierte Webapplikationen. Diese Applikationen besitzen jeweils einen Administrations-Bereich, in welchem man sich mit Benutzername und Passwort einloggen kann. Da allink anfangs 2012 fast 100 solche Webapplikationen in Betrieb hatte, werden vielfach die selben Login-Daten wiederverwendet.
 
 \section{Problemstellung}
 \label{sec:Problemstellung}
-Nicht alle verwendeten Login-Daten sind sauber dokumentiert. Darum muss man 
-teilweise den Entwickler einer Applikation nach den Login-Daten fragen, oder 
-die gängigsten Passwörter durchprobieren um Zugriff auf den 
-Administrations-Bereich zu erhalten. Zudem gibt es keine Möglichkeit einem 
-Mitarbeiter welcher die Agentur verlässt den Zugang zu Sperren, ohne dass man 
-in sämtlichen Applikationen die Zugangsdaten ändert.
+Nicht alle verwendeten Login-Daten sind sauber dokumentiert. Darum muss man teilweise den Entwickler einer Applikation nach den Login-Daten fragen, oder die gängigsten Passwörter durchprobieren um Zugriff auf den Administrations-Bereich zu erhalten. Zudem gibt es keine Möglichkeit einem Mitarbeiter welcher die Agentur verlässt den Zugang zu sperren, ohne dass in sämtlichen Applikationen die Zugangsdaten geändert werden müssen.
 
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-Das Hauptziel dieser Arbeit besteht darin, den Zugang zu den Administrations-Bereichen über ein zentrales System zu Regeln.
+Das Hauptziel dieser Arbeit besteht darin, den Zugang zu den Administrations-Bereichen über ein zentrales System zu Regeln. Dadurch kann sich jeder Mitarbeiter mit seinen eigenen Zugangsdaten an allen Administrations-Bereichen anmelden.
