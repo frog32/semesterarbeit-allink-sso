@@ -1,9 +1,9 @@
 %!TEX root = ../index.tex
-Dieser Teil befasst sich mit der eigentlichen Programmierarbeit und allem was zusätzlich nötig ist um ein fertiges Produkt zu erstellen.
+Dieser Teil befasst sich mit der eigentlichen Programmierarbeit und allem was zusätzlich nötig war um diese Applikation zu erstellen.
 
 \section{Namensgebung}
 \label{sec:namensgebung}
-Der Name eines Softwareprojekts kann grossen Einfluss darauf haben, wie viel es von anderen Entwicklern verwendet wird. Darum wurde für dieses Projekt ein Name gesucht, der die Funktion beschreibt und den man sich einfach merken kann. Aus diesen Überlegungen entstand der Name ``django-admin-sso''.
+Der Name eines Softwareprojekts kann grossen Einfluss darauf haben, wie viel es von anderen Entwicklern verwendet wird. Darum wurde für dieses Projekt ein Name gesucht, der die Funktion beschreibt und den man sich einfach merken kann. Aus diesen Überlegungen entstand der Name django-admin-sso.
 
 \section{Opensource}
 \label{sec:opensource}
@@ -22,7 +22,7 @@ Um ein Tool für Dritte nutzbar zu machen und um zu gewährleisten, dass diese a
 
 \subsection{Bestandteile aus anderen Projekten}
 \label{sub:bestandteile_aus_anderen_projekten}
-In dieser Arbeit wurde zusätzlich zu Python OpenID die Implementierung eines OpenID Store-Backends aus django-openid-auth zurückgegriffen. Diese Datei wurde ebenfalls under der drei Klausel BSD Lizenz veröffentlicht und ist somit lizenzrechtlich kompatibel\footnote{\url{http://www.dwheeler.com/essays/floss-license-slide.html}} zu django-admin-sso. Um den Lizenzbedingungen Rechnung zu tragen wurde die Datei mit komplettem Lizenz-Text und Herkunftsangaben übernommen.
+In dieser Arbeit wurde zusätzlich zu Python OpenID die Implementierung eines OpenID Store-Backends aus django-openid-auth zurückgegriffen. Diese Datei wurde ebenfalls unter der drei Klausel BSD Lizenz veröffentlicht und ist somit lizenzrechtlich kompatibel\footnote{\url{http://www.dwheeler.com/essays/floss-license-slide.html}} zu django-admin-sso. Um den Lizenzbedingungen Rechnung zu tragen wurde die Datei mit komplettem Lizenz-Text und Herkunftsangaben übernommen.
 
 \subsection{Versionsverwaltung}
 \label{sub:versionsverwaltung}
@@ -30,7 +30,7 @@ Es wurde \gls{Git} für die Versionierung verwendet, da dies dem Standard der al
 
 \section{Python Paket}
 \label{sec:Python Paket}
-Es gibt zwei grundsätzlich verschiedene Distributionsarten für Python Pakete. ``Source'' Distributionen sind Archive mit den benötigten Python Dateien zusammen mit einem Setup-Script. ``Builded'' Distributionen hingegen sind für ein bestimmtes System gebaut und lassen sich typischerweise über den systemeigenen Packet Manager oder im Fall von Windows, über ein Installationsprogramm installieren. Python Pakete welche für den Gebrauch in Webapplikationen konzipiert sind, sind normalerweise als ``Source''-Distribution erhältlich. Diese ``Source''-Distributionen werden dann mit easy\_install\footnote{\url{http://packages.python.org/distribute/easy_install.html}} oder pip\footnote{\url{http://www.pip-installer.org/}} installiert. Alternativ können ``Source''-Distributionen auch durch simples Entpacken und Ausführen des Installations-Skripts installiert werden. Da ``django-admin-sso'' nur für die Verwendung in Webapplikationen vorgesehen ist, wird nur eine ``Source''-Distribution erstellt.
+Es gibt zwei grundsätzlich verschiedene Distributionsarten für Python Pakete. ``Source'' Distributionen sind Archive mit den benötigten Python Dateien zusammen mit einem Setup-Script. ``Builded'' Distributionen hingegen sind für ein bestimmtes System gebaut und lassen sich typischerweise über den systemeigenen Packet Manager oder im Fall von Windows, über ein Installationsprogramm installieren. Python Pakete welche für den Gebrauch in Webapplikationen konzipiert sind, sind normalerweise als ``Source''-Distribution erhältlich. Diese ``Source''-Distributionen werden dann mit easy\_install\footnote{\url{http://packages.python.org/distribute/easy_install.html}} oder pip\footnote{\url{http://www.pip-installer.org/}} installiert. Alternativ können ``Source''-Distributionen auch durch simples Entpacken und Ausführen des Installations-Skripts installiert werden. Da django-admin-sso nur für die Verwendung in Webapplikationen vorgesehen ist, wird nur eine ``Source''-Distribution erstellt.
 
 \subsection{Paketerstellung}
 \label{sub:paketerstellung}

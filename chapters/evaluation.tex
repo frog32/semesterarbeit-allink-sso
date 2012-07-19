@@ -8,9 +8,9 @@ Es gibt diverse Standards mit welchen man einen Benutzer identifizieren kann. Je
 \subsubsection{OpenID}
 \label{ssub:OpenID}
 Der offene Standard Openid wird von der OpenID
-Foundation\footnote{\url{http://openid.net/foundation/}}, welche dafür gegründet wurde Marketing zu betreiben und die Rechte an der Marke OpenID zu wahren, gepflegt. Der Standard wurde dafür entwickelt, es einem Benutzer welcher über eine OpenID verfügt zu ermöglichen sich an Webseiten welche OpenID unterstützen anzumelden, ohne dass er sich einen neuen Benutzername und ein neues Passwort ausdenken muss. Das System welches die OpenID zur Verfügung stellt, wird dabei \gls{OpenID-Provider} und die Webseiten an der sich der Benutzer anmeldet \glspl{OpenID-Relying-Party} genannt.
+Foundation\footnote{\url{http://openid.net/foundation/}} entwickelt. Diese Stiftung vermarktet, schützt und pflegt die OpenID Gemeinschaft und deren Technologien. Der Standard wurde dafür entwickelt, es einem Benutzer welcher über eine OpenID verfügt zu ermöglichen, sich an Webseiten welche OpenID unterstützen anzumelden, ohne dass er sich einen neuen Benutzername und ein neues Passwort ausdenken muss. Das System welches die OpenID zur Verfügung stellt, wird dabei \gls{OpenID-Provider} und die Webseiten an der sich der Benutzer anmeldet \glspl{OpenID-Relying-Party} genannt.
 
-OpenID ist weit verbreitet und wird von vielen grösseren Webportalen unterstützt. Normalerweise erhält die \gls{OpenID-Relying-Party} nach dem ein Benutzer über OpenID eingeloggt hat, einen Identifier in form einer URL. Mit der attribute exchange Erweiterung lassen sich weitere Informationen über den Benutzer vom \gls{OpenID-Provider} beziehen.
+OpenID ist weit verbreitet und wird von vielen grösseren Webportalen unterstützt. Normalerweise erhält die \gls{OpenID-Relying-Party} nachdem sich ein Benutzer über OpenID eingeloggt hat, einen Identifier in form einer URL. Mit der attribute exchange Erweiterung lassen sich weitere Informationen über den Benutzer vom \gls{OpenID-Provider} beziehen.
 
 \subsubsection{OAuth}
 \label{ssub:OAuth}
@@ -18,7 +18,7 @@ Auch OAuth\footnote{\url{http://oauth.net}} ist ein offener Standard und ist zur
 
 \subsubsection{LDAP}
 \label{ssub:LDAP}
-Obwohl es unüblich ist für Webapplikationen LDAP\cite{rfc4511} zu verwenden, wurde diese Variante ebenfalls geprüft, da dies der einzige praktikable Weg wäre um eine Single-Sign-On Lösung mit einem Mac OS X Server als Kontenverwaltungsdienst zu erstellen.
+Obwohl es unüblich ist für Webapplikationen LDAP\cite{rfc4511} zu verwenden, wurde diese Variante ebenfalls geprüft, da dies der einzige praktikable Weg wäre, um eine Single-Sign-On Lösung mit einem Mac OS X Server als Kontenverwaltungsdienst zu erstellen.
 
 \section{Nutzwert-Analyse}
 \label{sec:Nutzwert-Analyse}
@@ -37,7 +37,7 @@ Die Gewichtung der einzelnen Punkte wurde in Zusammenarbeit mit der allink Gesch
 
 \subsection{Bewertung}
 \label{sub:Bewertung}
-Die zuvor beschriebenen Systeme, wurden gemäss der in der Gewichtung genannten Punkte bewertet. Jeder Punkt der Nutzwert-Analyse wurde nach der Skala in Tabelle~\ref{tab:nutzwertanalyse skala} klassiert. Nachfolgend wird auf die einzelnen Punkte eingegangen.
+Die zuvor beschriebenen Systeme wurden gemäss der in der Gewichtung genannten Punkte bewertet. Jeder Punkt der Nutzwert-Analyse wurde nach der Skala in Tabelle~\ref{tab:nutzwertanalyse skala} klassiert. Nachfolgend wird auf die einzelnen Punkte eingegangen.
 
 \begin{table}[h]
     \centering
@@ -80,7 +80,7 @@ wird zur Zeit von allen Mitarbeitern verwendet, da darüber die E-Mail Dienste l
 wird vor allem von der Projektleitung verwendet. Der Rest der Mitarbeiter verwendet Basecamp vor allem für die Zeiterfassung, welche aber über ein Widget geschieht und so nicht viel mit Basecamp zu tun hat.
 \paragraph{Mac OS X Server}
 \label{par:1.2Mac OS X Server}
-wird von allen Mitarbeitern für den Austausch von Dateien und für das Backup verwendet. Jedoch sind sich die meisten Mitarbeiter nicht bewusst wo sie dieses System verwenden, da sie sich dafür nie anmelden müssen.
+wird von allen Mitarbeitern für den Austausch von Dateien und für das Backup verwendet. Jedoch sind sich die meisten Mitarbeiter nicht bewusst wo sie dieses System verwenden da sie sich dafür nie anmelden müssen.
 
 \begin{tabular}{lc}
 Google Apps & 4\\
@@ -93,13 +93,13 @@ Mac OS X Server & 2\\
 Bei jedem Zu- und Abgang eines Mitarbeiters bei allink muss ein Benutzerkonto errichtet bzw. ein Benutzerkonto wieder gesperrt werden. Darum ist es notwendig, dass zumindest die Geschäftsleitung mit den entsprechenden Tools vertraut ist.
 \paragraph{Google Apps}
 \label{par:1.3Google Apps}
-wird von der Informatik Leitung regelmässig verwendet. Daneben wird regelmässig Google Apps für Kunden eingerichtet und jeder Informatiker kennt sich im Administrationsbereich aus. Zudem sollte auch die gesamte Geschäftsleitung über Grundkenntnisse verfügen.
+wird von der Informatik Leitung regelmässig verwendet. Daneben wird gelegentlich Google Apps für Kunden eingerichtet und jeder Informatiker kennt sich im Administrationsbereich aus. Zudem sollte auch die gesamte Geschäftsleitung über Grundkenntnisse verfügen.
 \paragraph{Basecamp}
 \label{par:1.3Basecamp}
 wird vor allem von der Projektleitung verwaltet. Das Erstellen eines neuen Mitarbeiters ist jeweils die Aufgabe der Informatik Leitung.
 \paragraph{Mac OS X Server}
 \label{par:1.3Mac OS X Server}
-wird nur von der Informatik Leitung konfiguriert und wird sonnst von niemandem verwendet.
+wird nur von der Informatik Leitung konfiguriert und wird sonst von niemandem verwendet.
 
 \begin{tabular}{lc}
 Google Apps & 4\\
@@ -128,7 +128,7 @@ Mac OS X Server & 1\\
 
 \subsubsection{OAuth}
 \label{ssub:Bewertung OAuth}
-Obwohl OAuth eigentlich nicht als authentifizierungs Protokoll gedacht ist. Kann es dafür verwendet werden indem man vom Provider die entsprechenden Daten bezieht. Dies ist jedoch zweite Wahl falls sich keine Möglichkeit bietet OpenID zu verwenden.
+Obwohl OAuth eigentlich nicht als Authentifizierungs-Protokoll gedacht ist. Kann es dafür verwendet werden indem man vom Provider die entsprechenden Daten bezieht. Dies ist jedoch zweite Wahl falls sich keine Möglichkeit bietet OpenID zu verwenden.
 \paragraph{Google Apps}
 \label{par:2.2Google Apps}
 lässt über OAuth Zugriff auf Benutzerdaten und Schnittstellen zu.
@@ -145,8 +145,8 @@ Basecamp & 3\\
 Mac OS X Server & 0\\
 \end{tabular}
 
-\subsubsection{anderes System}
-\label{ssub:anderes System}
+\subsubsection{Anderes System}
+\label{ssub:Anderes System}
 Für den Fall, dass keines unserer Systeme geeignet ist um einen Benutzer mit OpenID oder OAuth zu authentifizieren, wurden weitere Möglichkeiten unserer Systeme überprüft.
 \paragraph{Google Apps}
 \label{par:2.3Google Apps}
@@ -166,7 +166,7 @@ Mac OS X Server & 3\\
 
 \section{Auswertung}
 \label{sec:Auswertung}
-Wenn man die obigen Bewertungen gewichtet und summiert zeit sich ein klarer Sieger. Dies lässt sich dadurch erklären, dass Google die eigene Platform bewusst mit den nötigen Schnittstellen ausrüstet, weil es für Google Apps mittlerweile sogar einen Marktplatz für Zusatztools gibt.
+Wenn man die obigen Bewertungen gewichtet und summiert zeit sich Google Apps als klarer Sieger. Dies lässt sich dadurch erklären, dass Google die eigene Platform bewusst mit den nötigen Schnittstellen ausrüstet, weil es für Google Apps mittlerweile sogar einen Marktplatz für Zusatztools gibt.
 
 \begin{table}[h!]
   \centering

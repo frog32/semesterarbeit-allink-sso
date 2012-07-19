@@ -9,11 +9,11 @@ Aus der Evaluation geht hervor, dass eine Anbindung an die OpenID Dienste von Go
 \subsection{Anmelde-Mechanismus}
 \label{sub:Anmelde-Mechanismus}
 In den meisten Fällen ist keine granulare Unterteilung der Benutzerrechte jedes einzelnen Mitarbeiters nötig. Den es geht viel mehr darum, jedem Mitarbeiter von allink Zugriff zu den Administrations-Bereichen sämtlicher Webapplikationen zu gewähren und beim Enden des Arbeitsverhältnisses diese Rechte wieder zu entziehen. Aufgrund dessen wird wie bisher für jede Webapplikation ein Benutzer mit vollen Administrator-Rechten erstellt. Bei erfolgreichem Anmelden über Google Apps ist der Mitarbeiter danach im Administrations-Bereich mit diesem Benutzer angemeldet und bleibt für die Dauer seiner Session zugelassen.
-Es ist möglich Regeln für die automatische Zuweisung von lokalen Benutzerkonten zu OpenID Benutzern zu erstellen. Diese Regeln können unterschiedlich gewichtet werden um fälle in denen zum Beispiel wenige OpenID Benutzer Administrator-Rechte haben und alle übrigen Mitarbeiter Autoren-Rechte erhalten sollen.
+Es ist möglich Regeln für die automatische Zuweisung von lokalen Benutzerkonten zu OpenID Benutzern zu erstellen. Diese Regeln können unterschiedlich gewichtet werden um Fälle in denen zum Beispiel wenige OpenID Benutzer Administrator-Rechte haben und alle übrigen Mitarbeiter Autoren-Rechte erhalten sollen.
 
 \subsection{Wahl eines OpenID-Providers}
 \label{sub:Wahl eines OpenID Providers}
-Die Applikation benötigt um zu funktionieren einen OpenID-Provider. Theoretisch lässt sie sich mit jedem beliebigen OpenID-Provider verwenden. Da wir die Mitarbeiter mit Hilfe der vom OpenID-Provider verlangten E-Mail-Adresse identifizieren, und ein OpenID-Provider diese E-Mail-Adresse fälschen könnte, kann der OpenID-Provider nicht während des Login-Prozesses gewählt werden. Der Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard verwendet.
+Die Applikation benötigt um lauffähig zu sein einen OpenID-Provider. Theoretisch lässt sie sich mit jedem beliebigen OpenID-Provider verwenden. Da wir die Mitarbeiter mit Hilfe der vom OpenID-Provider verlangten E-Mail-Adresse identifizieren und ein OpenID-Provider diese E-Mail-Adresse fälschen könnte, kann der OpenID-Provider nicht während des Login-Prozesses gewählt werden. Der Provider muss in den Einstellungen der Webapplikation hinterlegt werden. Falls jedoch kein Provider hinterlegt wurde, wird das Portal von Google als Standard verwendet.
 
 \subsection{Abhängigkeiten}
 \label{sub:Abhängigkeiten}
@@ -25,4 +25,4 @@ Da die korrekte Implementation von OpenID wichtig ist um die Sicherheit zu gewä
 
 \subsubsection{Django}
 \label{ssub:Django}
-Da ein Paket für das Django Webframework erstellt werden soll gehört Django auch zu den Abhängigkeiten. Um `Class Based Views' verwenden zu können benötigt man mindestens Version 1.3, welche zum Zeitpunkt dieser Arbeit bereits nicht mehr die aktuellste Version ist.
+Da ein Paket für das Django Webframework erstellt werden soll gehört Django auch zu den Abhängigkeiten. Um `Class Based Views' verwenden zu können, benötigt man mindestens Version 1.3, welche zum Zeitpunkt dieser Arbeit bereits nicht mehr die aktuellste Version ist.

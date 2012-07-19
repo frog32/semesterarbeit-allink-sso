@@ -7,7 +7,7 @@ OpenID wurde entwickelt damit sich Benutzer an fremden Webseiten anmelden könne
 
 \section{Ablauf}
 \label{sec:ablauf}
-Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über OpenID. Es handelt sich hierbei um den einfachsten Ablauf. Es gibt noch weitere Abläufe in denen zum Beispiel der Provider und die Relying-Party ein Shared Secret mittels Diffie Hellman\cite{rfc2631} vereinbaren um damit die OpenID-Response mit einem HMAC\cite{rfc2104} zu versehen. Damit sind die Schritte 9 und 10 nicht mehr nötig, da nach dem Schritt 8 die Relying-Party bereits sicherstellen kann, dass die Response nicht verändert wurde und vom Provider stammt.
+Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über OpenID. Es handelt sich hierbei um den einfachsten Ablauf. Es gibt noch weitere Abläufe, in denen zum Beispiel der Provider und die Relying-Party ein Shared Secret mittels Diffie Hellman\cite{rfc2631} vereinbaren, um damit die OpenID-Response mit einem HMAC\cite{rfc2104} zu versehen. Damit sind die Schritte 9 und 10 nicht mehr nötig, da nach dem Schritt 8 die Relying-Party bereits sicherstellen kann, dass die Response nicht verändert wurde und vom Provider stammt.
 \begin{figure}[H]
   \centering
 	\includegraphics[width=0.9\textwidth]{include/openid1.pdf}
@@ -21,7 +21,7 @@ Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über Ope
   \item die Relying-Party führt eine Discovery durch um den Provider zu finden
   \item die Relying-Party übergibt dem Benutzer einen OpenID-Request
   \item der OpenID-Request wird vom Benutzer welcher weitergeleitet wird an den Provider geliefert
-  \item falls Nötig fordert der Provider den Benutzer auf sich anzumelden
+  \item falls nötig fordert der Provider den Benutzer auf sich anzumelden
   \item der Provider leitet den Benutzer mit der OpenID-Response an die Relying-Party weiter
   \item der Benutzer übergibt der Relying-Party die OpenID-Response
   \item die Relying-Party sendet dem Provider die OpenID-Response zur Bestätigung
@@ -31,7 +31,7 @@ Abbildung~\ref{fig:openid_ablauf} zeigt den Ablauf der Authentisierung über Ope
 
 \section{Sicherheit}
 \label{sec:sicherheit}
-Die Sicherheit von OpenID beruht vor allem auf dem Vertrauen in den OpenID-Provider. Da sich diese Arbeit darauf verlässt, dass die E-Mail-Adresse welche vom OpenID-Provider geliefert wird stimmt, wurde auf die Schritte 1-3 aus Abbildung~\ref{fig:openid_ablauf} verzichtet und stattdessen ein OpenID-Provider in der Konfiguration hinterlegt.
+Die Sicherheit von OpenID beruht vor allem auf dem Vertrauen in den OpenID-Provider. Da sich diese Arbeit darauf verlässt, dass die E-Mail-Adresse, welche vom OpenID-Provider geliefert wird, stimmt wurde auf die Schritte 1-3 aus Abbildung~\ref{fig:openid_ablauf} verzichtet und stattdessen ein OpenID-Provider in der Konfiguration hinterlegt.
 
 \section{Erweiterungen}
 \label{sec:erweiterungen}
